@@ -1,0 +1,122 @@
+# Module: zeek
+# Docs: https://www.elastic.co/guide/en/beats/filebeat/7.x/filebeat-module-zeek.html
+
+- module: zeek
+  capture_loss:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/capture_loss.*.log", "/home/ubuntu/zeek/logs/capture_loss.*.log" ]
+  connection:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/conn.*.log", "/home/ubuntu/zeek/logs/conn.*.log" ]
+  dce_rpc:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/dce_rpc.*.log", "/home/ubuntu/zeek/logs/dce_rpc.*.log" ]
+  dhcp:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/dce_rpc.*.log", "/home/ubuntu/zeek/logs/dce_rpc.*.log" ]
+  dnp3:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/dnp3.*.log", "/home/ubuntu/zeek/logs/dnp3.*.log" ]
+  dns:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/dns.*.log", "/home/ubuntu/zeek/logs/dns.*.log" ]
+  dpd:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/dpd.*.log", "/home/ubuntu/zeek/logs/dpd.*.log" ]
+  files:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/files.*.log", "/home/ubuntu/zeek/logs/files.*.log" ]
+  ftp:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/ftp.*.log", "/home/ubuntu/zeek/logs/ftp.*.log" ]
+  http:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/http.*.log", "/home/ubuntu/zeek/logs/http.*.log" ]
+  intel:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/intel.*.log", "/home/ubuntu/zeek/logs/intel.*.log" ]
+  irc:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/irc.*.log", "/home/ubuntu/zeek/logs/irc.*.log" ]
+  kerberos:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/kerberos.*.log", "/home/ubuntu/zeek/logs/conn.*.log" ]
+  modbus:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/modbus.*.log", "/home/ubuntu/zeek/logs/modbus.*.log" ]
+  mysql:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/mysql.*.log", "/home/ubuntu/zeek/logs/mysql.*.log" ]
+  notice:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/notice.*.log", "/home/ubuntu/zeek/logs/notice.*.log" ]
+  ntlm:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/ntlm.*.log", "/home/ubuntu/zeek/logs/ntlm.*.log" ]
+  ocsp:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/ocsp.*.log", "/home/ubuntu/zeek/logs/ocsp.*.log" ]
+  pe:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/pe.*.log", "/home/ubuntu/zeek/logs/pe.*.log" ]
+  radius:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/radius.*.log", "/home/ubuntu/zeek/logs/radius.*.log" ]
+  rdp:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/rdp.*.log", "/home/ubuntu/zeek/logs/rdp.*.log" ]
+  rfb:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/rfb.*.log", "/home/ubuntu/zeek/logs/rfb.*.log" ]
+  signatures:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/signatures.*.log", "/home/ubuntu/zeek/logs/signatures.*.log" ]
+  sip:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/sip.*.log", "/home/ubuntu/zeek/logs/sip.*.log" ]
+  smb_cmd:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/smb_cmd.*.log", "/home/ubuntu/zeek/logs/smb_cmd.*.log" ]
+  smb_files:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/smb_files.*.log", "/home/ubuntu/zeek/logs/smb_files.*.log" ]
+  smb_mapping:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/smb_mapping.*.log", "/home/ubuntu/zeek/logs/smb_mapping.*.log" ]
+  smtp:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/smtp.*.log", "/home/ubuntu/zeek/logs/smtp.*.log" ]
+  snmp:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/snmp.*.log", "/home/ubuntu/zeek/logs/snmp.*.log" ]
+  socks:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/socks.*.log", "/home/ubuntu/zeek/logs/socks.*.log" ]
+  ssh:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/ssh.*.log", "/home/ubuntu/zeek/logs/ssh.*.log" ]
+  ssl:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/ssl.*.log", "/home/ubuntu/zeek/logs/ssl.*.log" ]
+  stats:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/stats.*.log", "/home/ubuntu/zeek/logs/stats.*.log" ]
+  syslog:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/syslog.*.log", "/home/ubuntu/zeek/logs/syslog.*.log" ]
+  traceroute:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/traceroute.*.log", "/home/ubuntu/zeek/logs/traceroute.*.log" ]
+  tunnel:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/tunnel.*.log", "/home/ubuntu/zeek/logs/tunnel.*.log" ]
+  weird:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/weird.*.log", "/home/ubuntu/zeek/logs/weird.*.log" ]
+  x509:
+    enabled: true
+    var.paths: [ "/usr/local/bro/logs/current/x509.*.log", "/home/ubuntu/zeek/logs/x509.*.log" ]
+
+    # Set custom paths for the log files. If left empty,
+    # Filebeat will choose the paths depending on your OS.
+    #var.paths:
