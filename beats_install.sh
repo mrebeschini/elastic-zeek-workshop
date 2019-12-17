@@ -1,5 +1,6 @@
 #!/bin/bash
 CONFIG_REPOSITORY_URL="https://raw.githubusercontent.com/mrebeschini/elastic-zeek-workshop/master"
+AUDITD_ATTACK_RULES_URL="https://raw.githubusercontent.com/bfuzzy/auditd-attack/master/auditd-attack.rules"
 ZEEK_LOGS_DIR=/home/ubuntu/zeek/logs
 
 echo "*****************************************"
@@ -72,8 +73,7 @@ function install_beat() {
 
     case $BEAT_NAME in
         auditbeat)
-            wget -q $CONFIG_REPOSITORY_URL/auditd-attack.rules.conf -N -O /etc/auditbeat/audit.rules.d
-            echo "Stopping auditd deamon"
+            wget -q $AUDITD_ATTACK_RULES_URL -N -O /etc/auditbeat/audit.rules.d/auditd-attack.rules.conf
             systemctl stop auditd &> /dev/null
             systemctl disable auditd &> /dev/null
             ;;
@@ -82,10 +82,9 @@ function install_beat() {
             wget -q -N $CONFIG_REPOSITORY_URL/zeek-ctf-logs.tar.gz -N -O /tmp/zeek-ctf-logs.tar.gz
             if [ -d $ZEEK_LOGS_DIR ]; then
                 rm -Rf $ZEEK_LOGS_DIR
-            else
-                mkdir -p $ZEEK_LOGS_DIR
-            fi
-            tar xfvz /tmp/zeek-ctf-logs.tar.gz -C $ZEEK_LOGS_DIR
+	    fi
+            mkdir -p $ZEEK_LOGS_DIR
+            tar xfvz /tmp/zeek-ctf-logs.tar.gz -C $ZEEK_LOGS_DIR > /dev/null
 	    rm -f /tmp/zeek-ctf-logs.tar.gz
 	    chown -R ubuntu:ubuntu $ZEEK_LOGS_DIR
             wget -q $CONFIG_REPOSITORY_URL/zeek.yml -O /etc/filebeat/modules.d/zeek.yml
