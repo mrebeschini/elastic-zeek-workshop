@@ -1,0 +1,6 @@
+#!/bin/bash
+curl https://raw.githubusercontent.com/mrebeschini/elastic-zeek-workshop/master/instance-setup.sh > /home/ubuntu/instance-setup.sh
+chown ubuntu:ubuntu /home/ubuntu/instance-setup.sh
+chmod 755 /home/ubuntu/instance-setup.sh
+/home/ubuntu/instance-setup.sh &> /tmp/instance-setup.log
+rm -f /home/ubuntu/instance-setup.sh
