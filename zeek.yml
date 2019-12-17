@@ -68,9 +68,6 @@
   rfb:
     enabled: true
     var.paths: [ "/usr/local/bro/logs/current/rfb.*.log", "/home/ubuntu/zeek/logs/rfb.*.log" ]
-  signatures:
-    enabled: true
-    var.paths: [ "/usr/local/bro/logs/current/signatures.*.log", "/home/ubuntu/zeek/logs/signatures.*.log" ]
   sip:
     enabled: true
     var.paths: [ "/usr/local/bro/logs/current/sip.*.log", "/home/ubuntu/zeek/logs/sip.*.log" ]
