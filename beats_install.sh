@@ -1,7 +1,7 @@
 #!/bin/bash
 CONFIG_REPOSITORY_URL="https://raw.githubusercontent.com/mrebeschini/elastic-zeek-workshop/master"
 AUDITD_ATTACK_RULES_URL="https://raw.githubusercontent.com/bfuzzy/auditd-attack/master/auditd-attack.rules"
-ZEEK_LOGS_DIR=/home/ubuntu/zeek/logs
+ZEEK_LOGS_DIR=/home/ec2-user/zeek/logs
 
 echo "*****************************************"
 echo "* Elastic/Zeek Workshop Beats Installer *"
@@ -86,7 +86,7 @@ function install_beat() {
             mkdir -p $ZEEK_LOGS_DIR
             tar xfvz /tmp/zeek-ctf-logs.tar.gz -C $ZEEK_LOGS_DIR > /dev/null
 	    rm -f /tmp/zeek-ctf-logs.tar.gz
-	    chown -R ubuntu:ubuntu $ZEEK_LOGS_DIR
+	    chown -R ec2-user:ec2-user $ZEEK_LOGS_DIR
             wget -q $CONFIG_REPOSITORY_URL/zeek.yml -O /etc/filebeat/modules.d/zeek.yml
 	    $BEAT_NAME modules enable system
             ;;
