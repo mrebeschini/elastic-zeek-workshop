@@ -1,6 +1,6 @@
 #!/bin/bash
-curl https://raw.githubusercontent.com/mrebeschini/elastic-zeek-workshop/master/instance-setup.sh > /home/ubuntu/instance-setup.sh
-chown ubuntu:ubuntu /home/ubuntu/instance-setup.sh
-chmod 755 /home/ubuntu/instance-setup.sh
-/home/ubuntu/instance-setup.sh &> /tmp/instance-setup.log
-rm -f /home/ubuntu/instance-setup.sh
+curl https://raw.githubusercontent.com/mrebeschini/elastic-zeek-workshop/master/instance-setup.sh > /home/ec2-user/instance-setup.sh
+chown ec2-user:ec2-user /home/ec2-user/instance-setup.sh
+chmod 755 /home/ec2-user/instance-setup.sh
+/home/ec2-user/instance-setup.sh &> /tmp/instance-setup.log
+rm -f /home/ec2-user/instance-setup.sh
