@@ -88,12 +88,6 @@ function install_beat() {
 	    rm -f /tmp/zeek-ctf-logs.tar.gz
 	    chown -R ubuntu:ubuntu $ZEEK_LOGS_DIR
             wget -q $CONFIG_REPOSITORY_URL/zeek.yml -O /etc/filebeat/modules.d/zeek.yml
-
-	    #The next steps won't be needed once Elastic Stack v7.6 is released
-	    rm -Rf /usr/share/filebeat/module/zeek/*
-	    wget -q $CONFIG_REPOSITORY_URL/zeek-module-7.6.tar.gz -N -O /tmp/zeek-module-7.6.tar.gz
-	    tar xvfz /tmp/zeek-module-7.6.tar.gz -C /usr/share/filebeat/module/zeek/ &> /dev/null
-
 	    $BEAT_NAME modules enable system
             ;;
     esac
