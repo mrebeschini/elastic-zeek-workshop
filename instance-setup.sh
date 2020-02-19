@@ -1,8 +1,8 @@
 #!/bin/bash                                                                                                                                                                                                                              
 CONFIG_REPOSITORY_URL="https://raw.githubusercontent.com/mrebeschini/elastic-zeek-workshop/master"
-ZEEK_DIR=/home/ubuntu/zeek
+ZEEK_DIR=/home/ec2-user/zeek
 
 mkdir $ZEEK_DIR
-chown ubuntu:ubuntu $ZEEK_DIR
+chown ec2-user:ec2-user $ZEEK_DIR
 
 wget $CONFIG_REPOSITORY_URL/beats_install.sh
