@@ -77,7 +77,7 @@ function install_beat() {
             ;;
         filebeat)
             #Download pre-generated Zeek Logs for CTF exercises
-            wget -q -N $CONFIG_REPOSITORY_URL/zeek-ctf-logs.tar.gz -N -O /tmp/zeek-ctf-logs.tar.gz
+            wget -q -N $CONFIG_REPOSITORY_URL/zeek-logs.tar.gz -N -O /tmp/zeek-logs.tar.gz
 	    if [ -d $ZEEK_LOGS_DIR ]; then
 	      rm -Rf $ZEEK_LOGS_DIR
 	    fi
