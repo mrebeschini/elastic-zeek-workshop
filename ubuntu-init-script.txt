@@ -1,6 +1,12 @@
 #!/bin/bash
 curl https://raw.githubusercontent.com/mrebeschini/elastic-zeek-workshop/master/instance-setup.sh > /home/ec2-user/instance-setup.sh
-chown ec2-user:ec2-user /home/ec2-user/instance-setup.sh
 chmod 755 /home/ec2-user/instance-setup.sh
-/home/ec2-user/instance-setup.sh
+cd /home/ec2-user/
+./instance-setup.sh
 rm -f /home/ec2-user/instance-setup.sh
+
+mkdir /usr/local/zeek/logs/lab
+cd /usr/local/zeek/logs/lab
+wget http://zeekctf.com:81/2020-02-bsidessf.tgz -O /usr/local/zeek/logs/2020-02-bsidessf.tgz
+tar xzf /usr/local/zeek/logs/2020-02-bsidessf.tgz
+rm -f /usr/local/zeek/logs/2020-02-bsidessf.tgz
