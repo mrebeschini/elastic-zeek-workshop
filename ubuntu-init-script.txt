@@ -6,6 +6,7 @@ cd /home/ec2-user/
 rm -f /home/ec2-user/instance-setup.sh
 
 mkdir /usr/local/zeek/logs/lab
+mkdir /usr/local/zeek/logs/current
 cd /usr/local/zeek/logs/lab
 wget http://zeekctf.com:81/2020-02-bsidessf.tgz -O /usr/local/zeek/logs/2020-02-bsidessf.tgz
 tar xzf /usr/local/zeek/logs/2020-02-bsidessf.tgz
