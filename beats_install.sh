@@ -100,10 +100,8 @@ decode_cloud_id
 echo -e "\nLoading MITRE/GEO Ingest Pipelines into ${ES_URL}"
 wget -q -N $CONFIG_REPOSITORY_URL/pipeline_generic_geo.json
 wget -q -N $CONFIG_REPOSITORY_URL/pipeline_mitre_geo_auditbeat.json
-wget -q -N $CONFIG_REPOSITORY_URL/pipeline_mitre_geo_winlogbeat.json
 curl --silent --user elastic:$CLOUD_AUTH -XPUT "${ES_URL}/_ingest/pipeline/geoip-info" -H "Content-Type: application/json" -d @pipeline_generic_geo.json
 curl --silent --user elastic:$CLOUD_AUTH -XPUT "${ES_URL}/_ingest/pipeline/mitre_auditbeat" -H "Content-Type: application/json" -d @pipeline_mitre_geo_auditbeat.json
-curl --silent --user elastic:$CLOUD_AUTH -XPUT "${ES_URL}/_ingest/pipeline/windows_geo_mitre" -H "Content-Type: application/json" -d @pipeline_mitre_geo_winlogbeat.json
 rm -f pipeline_*.json
 
 #Install Beats
