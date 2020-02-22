@@ -1,6 +1,6 @@
 #!/bin/bash
 CONFIG_REPOSITORY_URL="https://raw.githubusercontent.com/mrebeschini/elastic-zeek-workshop/master"
-AUDITD_ATTACK_RULES_URL="$CONFIG_REPOSITORY_URL/auditd-attack-rules.conf"
+AUDITD_ATTACK_RULES_URL="$CONFIG_REPOSITORY_URL/auditd-attack.rules.conf"
 
 echo "************************************************"
 echo "* Elastic/Zeek BSides Workshop Beats Installer *"
