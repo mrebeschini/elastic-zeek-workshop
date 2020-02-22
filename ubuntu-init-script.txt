@@ -12,5 +12,5 @@ cd /usr/local/zeek/logs/lab
 #tar xzf /usr/local/zeek/logs/2020-02-bsidessf.tgz
 #rm -f /usr/local/zeek/logs/2020-02-bsidessf.tgz
 wget https://github.com/mrebeschini/elastic-zeek-workshop/raw/master/zeek-ctf-logs.tar.gz
-tar xzf /usr/local/zeek/logs/zeek-ctf-logs.tar.gz
-rm -f /usr/local/zeek/logs/zeek-ctf-logs.tar.gz
+tar xzf /usr/local/zeek/logs/lab/zeek-ctf-logs.tar.gz
+rm -f /usr/local/zeek/logs/lab/zeek-ctf-logs.tar.gz
